@@ -1,9 +1,6 @@
 Build target 'Target 1'
 compiling main.c...
-main.c(470): warning:  #1-D: last line of file ends without a newline
-  }
-main.c: 1 warning, 0 errors
 linking...
-Program Size: Code=16586 RO-data=1790 RW-data=192 ZI-data=1024  
+Program Size: Code=16990 RO-data=1790 RW-data=192 ZI-data=1024  
 FromELF: creating hex file...
-"..\OBJ\LED.axf" - 0 Error(s), 1 Warning(s).
+"..\OBJ\LED.axf" - 0 Error(s), 0 Warning(s).

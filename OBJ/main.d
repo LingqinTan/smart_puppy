@@ -19,3 +19,4 @@
 ..\obj\main.o: ..\HARDWARE\Bluetooth.h
 ..\obj\main.o: D:\Software\SoftwareTool\MDK5.14\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\main.o: ..\HARDWARE\Servo.h
+..\obj\main.o: ..\HARDWARE\Buzzer.h
