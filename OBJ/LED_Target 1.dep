@@ -1,5 +1,5 @@
 Dependencies for Project 'LED', Target 'Target 1': (DO NOT MODIFY !)
-F (.\main.c)(0x68F1EC22)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\HARDWARE -I..\SYSTEM -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE-I d:\HomeFolder\Desktop\STM32F1xx_CODE\smart_puppy\USER\RTE-I D:\Software\SoftwareTool\MDK5.14\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\Software\SoftwareTool\MDK5.14\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+F (.\main.c)(0x68F1F0AE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\HARDWARE -I..\SYSTEM -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE-I d:\HomeFolder\Desktop\STM32F1xx_CODE\smart_puppy\USER\RTE-I D:\Software\SoftwareTool\MDK5.14\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\Software\SoftwareTool\MDK5.14\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (stm32f10x.h)(0x68F1B83A)
 I (..\CORE\core_cm3.h)(0x68F1B839)
 I (D:\Software\SoftwareTool\MDK5.14\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -17,6 +17,9 @@ I (..\HARDWARE\OLED.h)(0x68F1B839)
 I (..\HARDWARE\DogActions.h)(0x68F1E468)
 I (..\HARDWARE\ControlSystem.h)(0x68F1B839)
 I (..\HARDWARE\Ultrasonic.h)(0x68F1B839)
+I (..\HARDWARE\Bluetooth.h)(0x68F1B839)
+I (D:\Software\SoftwareTool\MDK5.14\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (..\HARDWARE\Servo.h)(0x68F1B839)
 F (.\stm32f10x_it.c)(0x68F1B83A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\HARDWARE -I..\SYSTEM -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE-I d:\HomeFolder\Desktop\STM32F1xx_CODE\smart_puppy\USER\RTE-I D:\Software\SoftwareTool\MDK5.14\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\Software\SoftwareTool\MDK5.14\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_it.o --omf_browse ..\obj\stm32f10x_it.crf --depend ..\obj\stm32f10x_it.d)
 I (stm32f10x_it.h)(0x68F1B83A)
 I (stm32f10x.h)(0x68F1B83A)

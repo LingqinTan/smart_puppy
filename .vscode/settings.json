@@ -9,6 +9,7 @@
         "delay.h": "c",
         "stddef.h": "c",
         "bluetoothcontrol.h": "c",
-        "ultrasonic.h": "c"
+        "ultrasonic.h": "c",
+        "bluetooth.h": "c"
     }
 }
