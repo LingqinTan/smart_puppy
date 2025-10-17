@@ -91,32 +91,47 @@ void Dog_WalkForward(uint8_t steps)
     uint16_t step_delay = 200 - (WalkSpeed * 15);
     
     for(uint8_t step = 0; step < steps; step++) {
+        
+        // 💥 修正：分时启动，平滑电流尖峰
+        
         // 相位1：抬左前腿和右后腿，推右前腿和左后腿
-        Servo_SetAngle(SERVO_FRONT_LEFT, ServoConfig[SERVO_FRONT_LEFT].lift_high);   // 前左抬
-        Servo_SetAngle(SERVO_FRONT_RIGHT, ServoConfig[SERVO_FRONT_RIGHT].push_low);  // 前右推
-        Servo_SetAngle(SERVO_REAR_LEFT, ServoConfig[SERVO_REAR_LEFT].push_low);      // 后左推
-        Servo_SetAngle(SERVO_REAR_RIGHT, ServoConfig[SERVO_REAR_RIGHT].lift_high);   // 后右抬
-        Delay_ms(step_delay / 2);
+        Servo_SetAngle(SERVO_FRONT_LEFT, ServoConfig[SERVO_FRONT_LEFT].lift_high);   // 前左抬 (ID 2)
+        Delay_ms(20); // <-- 增加 20ms 延时
+        Servo_SetAngle(SERVO_FRONT_RIGHT, ServoConfig[SERVO_FRONT_RIGHT].push_low);  // 前右推 (ID 1)
+        Delay_ms(20); // <-- 增加 20ms 延时
+        Servo_SetAngle(SERVO_REAR_LEFT, ServoConfig[SERVO_REAR_LEFT].push_low);      // 后左推 (ID 3)
+        Delay_ms(20); // <-- 增加 20ms 延时
+        Servo_SetAngle(SERVO_REAR_RIGHT, ServoConfig[SERVO_REAR_RIGHT].lift_high);   // 后右抬 (ID 4)
+        Delay_ms(step_delay / 2); // 保持原来的主延时
         
         // 相位2：向前摆动
-        Servo_SetAngle(SERVO_FRONT_LEFT, ServoConfig[SERVO_FRONT_LEFT].lift_low);    // 前左摆
-        Servo_SetAngle(SERVO_FRONT_RIGHT, ServoConfig[SERVO_FRONT_RIGHT].push_high); // 前右摆
-        Servo_SetAngle(SERVO_REAR_LEFT, ServoConfig[SERVO_REAR_LEFT].push_high);     // 后左摆
-        Servo_SetAngle(SERVO_REAR_RIGHT, ServoConfig[SERVO_REAR_RIGHT].lift_low);    // 后右摆
+        Servo_SetAngle(SERVO_FRONT_LEFT, ServoConfig[SERVO_FRONT_LEFT].lift_low);    // 前左摆 (ID 2)
+        Delay_ms(20);
+        Servo_SetAngle(SERVO_FRONT_RIGHT, ServoConfig[SERVO_FRONT_RIGHT].push_high); // 前右摆 (ID 1)
+        Delay_ms(20);
+        Servo_SetAngle(SERVO_REAR_LEFT, ServoConfig[SERVO_REAR_LEFT].push_high);     // 后左摆 (ID 3)
+        Delay_ms(20);
+        Servo_SetAngle(SERVO_REAR_RIGHT, ServoConfig[SERVO_REAR_RIGHT].lift_low);    // 后右摆 (ID 4)
         Delay_ms(step_delay / 2);
         
         // 相位3：抬右前腿和左后腿，推左前腿和右后腿
-        Servo_SetAngle(SERVO_FRONT_LEFT, ServoConfig[SERVO_FRONT_LEFT].push_low);    // 前左推
-        Servo_SetAngle(SERVO_FRONT_RIGHT, ServoConfig[SERVO_FRONT_RIGHT].lift_high); // 前右抬
-        Servo_SetAngle(SERVO_REAR_LEFT, ServoConfig[SERVO_REAR_LEFT].lift_high);     // 后左抬
-        Servo_SetAngle(SERVO_REAR_RIGHT, ServoConfig[SERVO_REAR_RIGHT].push_low);    // 后右推
+        Servo_SetAngle(SERVO_FRONT_LEFT, ServoConfig[SERVO_FRONT_LEFT].push_low);    // 前左推 (ID 2)
+        Delay_ms(20);
+        Servo_SetAngle(SERVO_FRONT_RIGHT, ServoConfig[SERVO_FRONT_RIGHT].lift_high); // 前右抬 (ID 1)
+        Delay_ms(20);
+        Servo_SetAngle(SERVO_REAR_LEFT, ServoConfig[SERVO_REAR_LEFT].lift_high);     // 后左抬 (ID 3)
+        Delay_ms(20);
+        Servo_SetAngle(SERVO_REAR_RIGHT, ServoConfig[SERVO_REAR_RIGHT].push_low);    // 后右推 (ID 4)
         Delay_ms(step_delay / 2);
         
         // 相位4：向前摆动
-        Servo_SetAngle(SERVO_FRONT_LEFT, ServoConfig[SERVO_FRONT_LEFT].push_high);   // 前左摆
-        Servo_SetAngle(SERVO_FRONT_RIGHT, ServoConfig[SERVO_FRONT_RIGHT].lift_low);  // 前右摆
-        Servo_SetAngle(SERVO_REAR_LEFT, ServoConfig[SERVO_REAR_LEFT].lift_low);      // 后左摆
-        Servo_SetAngle(SERVO_REAR_RIGHT, ServoConfig[SERVO_REAR_RIGHT].push_high);   // 后右摆
+        Servo_SetAngle(SERVO_FRONT_LEFT, ServoConfig[SERVO_FRONT_LEFT].push_high);   // 前左摆 (ID 2)
+        Delay_ms(20);
+        Servo_SetAngle(SERVO_FRONT_RIGHT, ServoConfig[SERVO_FRONT_RIGHT].lift_low);  // 前右摆 (ID 1)
+        Delay_ms(20);
+        Servo_SetAngle(SERVO_REAR_LEFT, ServoConfig[SERVO_REAR_LEFT].lift_low);      // 后左摆 (ID 3)
+        Delay_ms(20);
+        Servo_SetAngle(SERVO_REAR_RIGHT, ServoConfig[SERVO_REAR_RIGHT].push_high);   // 后右摆 (ID 4)
         Delay_ms(step_delay / 2);
     }
     
@@ -193,20 +208,18 @@ void Dog_TurnRight(uint8_t steps)
     uint16_t step_delay = 300 - (WalkSpeed * 20);
     
     for(uint8_t step = 0; step < steps; step++) {
-        Dog_SetAllServos(
-            ServoConfig[SERVO_FRONT_LEFT].lift_high,
-            ServoConfig[SERVO_FRONT_RIGHT].push_low,
-            ServoConfig[SERVO_REAR_LEFT].push_low,
-            ServoConfig[SERVO_REAR_RIGHT].lift_high
-        );
+        // 💥 修正：右转：左腿向前，右腿向后
+        Servo_SetAngle(SERVO_FRONT_LEFT, 110);  // 前左向前
+        Servo_SetAngle(SERVO_FRONT_RIGHT, 70);   // 前右向后
+        Servo_SetAngle(SERVO_REAR_LEFT, 110);    // 后左向前  
+        Servo_SetAngle(SERVO_REAR_RIGHT, 70);   // 后右向后
         Delay_ms(step_delay);
         
-        Dog_SetAllServos(
-            ServoConfig[SERVO_FRONT_LEFT].lift_low,
-            ServoConfig[SERVO_FRONT_RIGHT].push_high,
-            ServoConfig[SERVO_REAR_LEFT].push_high,
-            ServoConfig[SERVO_REAR_RIGHT].lift_low
-        );
+        // 💥 修正：反向动作
+        Servo_SetAngle(SERVO_FRONT_LEFT, 70);   // 前左向后
+        Servo_SetAngle(SERVO_FRONT_RIGHT, 110);  // 前右向前
+        Servo_SetAngle(SERVO_REAR_LEFT, 70);    // 后左向后
+        Servo_SetAngle(SERVO_REAR_RIGHT, 110);  // 后右向前
         Delay_ms(step_delay);
     }
     

@@ -78,53 +78,50 @@ void Draw_Avoidance_Radar(float distance, AvoidState state)
     }
 }
 
-// 修正：执行避障动作 (带音效)
+// 修正：执行避障动作 (统一调用 DogActions)
 void Execute_Avoidance_Action(AvoidState state)
 {
-    action_counter++;
+    // action_counter 仍然保留，用于随机转向
+    action_counter++; 
     
     switch(state) {
         case AVOID_CLEAR:
+            // 💥 修正：不再使用“前冲”
+            // 而是调用标准行走函数
             OLED_ShowString(1, 1, " (> _ <) Run!  "); 
             LED3_ON(); LED1_OFF(); LED2_OFF(); LED4_OFF();
-            Dog_Stand(); 
-            if (Delay_ms_Interruptible(200)) return; 
-            
-            Safe_Servo4_Move(100); Servo_SetAngle(1, 80); 
-            Servo_SetAngle(2, 100); Servo_SetAngle(3, 80);
-            if (Delay_ms_Interruptible(300)) return; 
-            Dog_Stand();
+            Dog_WalkForward(1); // <--- 统一调用！
             break;
             
         case AVOID_WARNING:
+            // 💥 修正：统一调用“站立”
             OLED_ShowString(1, 1, " (o _ O) !!    "); 
             LED2_ON(); LED1_OFF(); LED3_OFF(); LED4_OFF();
-            Buzzer_Beep(50); // <--- 3. 💥 新增音效 💥: 警告，短嘀一声
-            Dog_Stand(); 
+            Buzzer_Beep(50);
+            Dog_Stand(); // <--- 统一调用！
             if (Delay_ms_Interruptible(800)) return; 
             break;
             
         case AVOID_DANGER:
+            // 💥 修正：不再使用“假转”
+            // 而是调用标准转向函数
             OLED_ShowString(1, 1, " (@ _ @) ??    "); 
             LED1_ON(); LED2_OFF(); LED3_OFF(); LED4_OFF();
-            Buzzer_BeepPattern(BEEP_DOUBLE_BEEP); // <--- 3. 💥 新增音效 💥: 危险，双嘀！
+            Buzzer_BeepPattern(BEEP_DOUBLE_BEEP);
             
+            // 随机选择左转或右转（根据计数器奇偶）
             if((action_counter % 2) == 0) {
                 OLED_ShowString(2, 1, "ACTION: TURN LEFT ");
-                Safe_Servo4_Move(70); Servo_SetAngle(1, 110); 
-                Servo_SetAngle(2, 70); Servo_SetAngle(3, 110); 
-                if (Delay_ms_Interruptible(600)) return; 
-                Dog_Stand();
+                Dog_TurnLeft(1); // <--- 统一调用！
+                
             } else {
                 OLED_ShowString(2, 1, "ACTION: TURN RIGHT");
-                Safe_Servo4_Move(110); Servo_SetAngle(1, 70);
-                Servo_SetAngle(2, 110); Servo_SetAngle(3, 70); 
-                if (Delay_ms_Interruptible(600)) return; 
-                Dog_Stand();
+                Dog_TurnRight(1); // <--- 统一调用！
             }
             break;
             
         case AVOID_TURNING:
+            // (这个状态实际上已经不会被用到了，但保留也无妨)
             OLED_ShowString(1, 1, " (@ _ @) ??    "); 
             LED4_ON(); LED1_OFF(); LED2_OFF(); LED3_OFF();
             break;
