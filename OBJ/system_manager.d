@@ -1,0 +1,14 @@
+..\obj\system_manager.o: ..\HARDWARE\system_manager.c
+..\obj\system_manager.o: ..\HARDWARE\system_manager.h
+..\obj\system_manager.o: ..\USER\stm32f10x.h
+..\obj\system_manager.o: ..\CORE\core_cm3.h
+..\obj\system_manager.o: D:\Software\SoftwareTool\MDK5.14\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\system_manager.o: ..\USER\system_stm32f10x.h
+..\obj\system_manager.o: ..\USER\stm32f10x_conf.h
+..\obj\system_manager.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\system_manager.o: ..\USER\stm32f10x.h
+..\obj\system_manager.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\system_manager.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\system_manager.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\system_manager.o: ..\HARDWARE\servo.h
+..\obj\system_manager.o: ..\SYSTEM\Delay.h

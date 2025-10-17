@@ -1,0 +1,17 @@
+..\obj\controller.o: ..\SYSTEM\controller.c
+..\obj\controller.o: e:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+..\obj\controller.o: ..\SYSTEM\controller.h
+..\obj\controller.o: ..\USER\stm32f10x.h
+..\obj\controller.o: ..\CORE\core_cm3.h
+..\obj\controller.o: e:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\controller.o: ..\USER\system_stm32f10x.h
+..\obj\controller.o: ..\USER\stm32f10x_conf.h
+..\obj\controller.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\controller.o: ..\USER\stm32f10x.h
+..\obj\controller.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\controller.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\controller.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\controller.o: ..\SYSTEM\pid.h
+..\obj\controller.o: ..\SYSTEM\imu.h
+..\obj\controller.o: ..\SYSTEM\func.h
+..\obj\controller.o: ..\SYSTEM\filter.h

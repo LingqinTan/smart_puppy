@@ -1,0 +1,12 @@
+..\obj\servo.o: ..\HARDWARE\servo.c
+..\obj\servo.o: ..\USER\stm32f10x.h
+..\obj\servo.o: ..\CORE\core_cm3.h
+..\obj\servo.o: D:\Software\SoftwareTool\MDK5.14\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\servo.o: ..\USER\system_stm32f10x.h
+..\obj\servo.o: ..\USER\stm32f10x_conf.h
+..\obj\servo.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\servo.o: ..\USER\stm32f10x.h
+..\obj\servo.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\servo.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\servo.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\servo.o: ..\HARDWARE\PWM.h

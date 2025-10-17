@@ -1,0 +1,15 @@
+..\obj\dogactions.o: ..\HARDWARE\DogActions.c
+..\obj\dogactions.o: ..\HARDWARE\DogActions.h
+..\obj\dogactions.o: ..\USER\stm32f10x.h
+..\obj\dogactions.o: ..\CORE\core_cm3.h
+..\obj\dogactions.o: D:\Software\SoftwareTool\MDK5.14\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\dogactions.o: ..\USER\system_stm32f10x.h
+..\obj\dogactions.o: ..\USER\stm32f10x_conf.h
+..\obj\dogactions.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\dogactions.o: ..\USER\stm32f10x.h
+..\obj\dogactions.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\dogactions.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\dogactions.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\dogactions.o: ..\HARDWARE\Servo.h
+..\obj\dogactions.o: ..\SYSTEM\Delay.h
+..\obj\dogactions.o: D:\Software\SoftwareTool\MDK5.14\ARM\ARMCC\Bin\..\include\stddef.h

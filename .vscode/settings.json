@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "systick.h": "c",
+        "timer.h": "c",
+        "stm32f10x.h": "c",
+        "stm32f10x_tim.h": "c",
+        "pwm.h": "c",
+        "buzzer.h": "c",
+        "delay.h": "c",
+        "stddef.h": "c",
+        "bluetoothcontrol.h": "c",
+        "ultrasonic.h": "c"
+    }
+}

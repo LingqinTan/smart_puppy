@@ -1,0 +1,14 @@
+..\obj\robot_dog.o: ..\HARDWARE\robot_dog.c
+..\obj\robot_dog.o: ..\HARDWARE\robot_dog.h
+..\obj\robot_dog.o: ..\USER\stm32f10x.h
+..\obj\robot_dog.o: ..\CORE\core_cm3.h
+..\obj\robot_dog.o: D:\Software\SoftwareTool\MDK5.14\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\robot_dog.o: ..\USER\system_stm32f10x.h
+..\obj\robot_dog.o: ..\USER\stm32f10x_conf.h
+..\obj\robot_dog.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\robot_dog.o: ..\USER\stm32f10x.h
+..\obj\robot_dog.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\robot_dog.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\robot_dog.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\robot_dog.o: ..\HARDWARE\servo.h
+..\obj\robot_dog.o: ..\SYSTEM\delay.h

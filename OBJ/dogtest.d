@@ -1,0 +1,17 @@
+..\obj\dogtest.o: ..\HARDWARE\DogTest.c
+..\obj\dogtest.o: ..\USER\stm32f10x.h
+..\obj\dogtest.o: ..\CORE\core_cm3.h
+..\obj\dogtest.o: D:\Software\SoftwareTool\MDK5.14\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\dogtest.o: ..\USER\system_stm32f10x.h
+..\obj\dogtest.o: ..\USER\stm32f10x_conf.h
+..\obj\dogtest.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\dogtest.o: ..\USER\stm32f10x.h
+..\obj\dogtest.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\dogtest.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\dogtest.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\dogtest.o: ..\HARDWARE\DogActions.h
+..\obj\dogtest.o: ..\HARDWARE\OLED.h
+..\obj\dogtest.o: ..\SYSTEM\Delay.h
+..\obj\dogtest.o: ..\HARDWARE\LED.h
+..\obj\dogtest.o: ..\HARDWARE\Buzzer.h
+..\obj\dogtest.o: ..\HARDWARE\Key.h

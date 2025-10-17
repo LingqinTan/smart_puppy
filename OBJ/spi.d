@@ -1,0 +1,13 @@
+..\obj\spi.o: ..\SYSTEM\Spi.c
+..\obj\spi.o: ..\SYSTEM\Spi.h
+..\obj\spi.o: ..\USER\stm32f10x.h
+..\obj\spi.o: ..\CORE\core_cm3.h
+..\obj\spi.o: D:\Software\SoftwareTool\MDK5.14\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\spi.o: ..\USER\system_stm32f10x.h
+..\obj\spi.o: ..\USER\stm32f10x_conf.h
+..\obj\spi.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\spi.o: ..\USER\stm32f10x.h
+..\obj\spi.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\spi.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\spi.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\spi.o: ..\STM32F10x_FWLib\inc\stm32f10x_spi.h

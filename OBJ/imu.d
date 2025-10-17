@@ -1,0 +1,16 @@
+..\obj\imu.o: ..\SYSTEM\imu.c
+..\obj\imu.o: ..\SYSTEM\imu.h
+..\obj\imu.o: ..\USER\stm32f10x.h
+..\obj\imu.o: ..\CORE\core_cm3.h
+..\obj\imu.o: e:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\imu.o: ..\USER\system_stm32f10x.h
+..\obj\imu.o: ..\USER\stm32f10x_conf.h
+..\obj\imu.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\imu.o: ..\USER\stm32f10x.h
+..\obj\imu.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\imu.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\imu.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\imu.o: e:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\imu.o: ..\HARDWARE\MPU6050.h
+..\obj\imu.o: ..\HARDWARE\delay.h
+..\obj\imu.o: ..\SYSTEM\filter.h

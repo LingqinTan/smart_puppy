@@ -1,0 +1,15 @@
+..\obj\buzzer_test.o: ..\HARDWARE\buzzer_test.c
+..\obj\buzzer_test.o: ..\USER\stm32f10x.h
+..\obj\buzzer_test.o: ..\CORE\core_cm3.h
+..\obj\buzzer_test.o: D:\Software\SoftwareTool\MDK5.14\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\buzzer_test.o: ..\USER\system_stm32f10x.h
+..\obj\buzzer_test.o: ..\USER\stm32f10x_conf.h
+..\obj\buzzer_test.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\buzzer_test.o: ..\USER\stm32f10x.h
+..\obj\buzzer_test.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\buzzer_test.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\buzzer_test.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\buzzer_test.o: ..\SYSTEM\SysTick.h
+..\obj\buzzer_test.o: ..\SYSTEM\delay.h
+..\obj\buzzer_test.o: ..\HARDWARE\buzzer.h
+..\obj\buzzer_test.o: ..\HARDWARE\LED.h

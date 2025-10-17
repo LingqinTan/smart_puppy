@@ -1,0 +1,13 @@
+..\obj\eeprom.o: ..\SYSTEM\eeprom.c
+..\obj\eeprom.o: ..\SYSTEM\eeprom.h
+..\obj\eeprom.o: ..\USER\stm32f10x.h
+..\obj\eeprom.o: ..\CORE\core_cm3.h
+..\obj\eeprom.o: e:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\eeprom.o: ..\USER\system_stm32f10x.h
+..\obj\eeprom.o: ..\USER\stm32f10x_conf.h
+..\obj\eeprom.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\eeprom.o: ..\USER\stm32f10x.h
+..\obj\eeprom.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\eeprom.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\eeprom.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\eeprom.o: ..\STM32F10x_FWLib\inc\stm32f10x_flash.h

@@ -1,0 +1,15 @@
+..\obj\performance.o: ..\HARDWARE\performance.c
+..\obj\performance.o: ..\HARDWARE\performance.h
+..\obj\performance.o: ..\USER\stm32f10x.h
+..\obj\performance.o: ..\CORE\core_cm3.h
+..\obj\performance.o: D:\Software\SoftwareTool\MDK5.14\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\performance.o: ..\USER\system_stm32f10x.h
+..\obj\performance.o: ..\USER\stm32f10x_conf.h
+..\obj\performance.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\performance.o: ..\USER\stm32f10x.h
+..\obj\performance.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\performance.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\performance.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\performance.o: ..\HARDWARE\servo.h
+..\obj\performance.o: ..\SYSTEM\delay.h
+..\obj\performance.o: ..\HARDWARE\buzzer.h

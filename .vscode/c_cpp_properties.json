@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "d:\\HomeFolder\\Desktop\\STM32F1xx_CODE\\smart_puppy\\HARDWARE",
+                "d:\\HomeFolder\\Desktop\\STM32F1xx_CODE\\smart_puppy\\SYSTEM",
+                "d:\\HomeFolder\\Desktop\\STM32F1xx_CODE\\smart_puppy\\USER",
+                "d:\\HomeFolder\\Desktop\\STM32F1xx_CODE\\smart_puppy\\STM32F10x_FWLib\\inc",
+                "d:\\HomeFolder\\Desktop\\STM32F1xx_CODE\\smart_puppy\\CORE",
+                "D:\\Software\\SoftwareTool\\MDK5.14\\ARM\\ARMCC\\include",
+                "D:\\Software\\SoftwareTool\\MDK5.14\\ARM\\ARMCC\\include\\rw",
+                "d:\\HomeFolder\\Desktop\\STM32F1xx_CODE\\smart_puppy\\STM32F10x_FWLib\\src"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "USE_STDPERIPH_DRIVER",
+                "STM32F10X_MD"  
+            ],
+            "compilerPath": "D:\\Software\\DevelopmentEnvironment\\mingw64\\bin\\gcc.exe",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,16 @@
+..\obj\servotest.o: ..\HARDWARE\ServoTest.c
+..\obj\servotest.o: ..\USER\stm32f10x.h
+..\obj\servotest.o: ..\CORE\core_cm3.h
+..\obj\servotest.o: D:\Software\SoftwareTool\MDK5.14\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\servotest.o: ..\USER\system_stm32f10x.h
+..\obj\servotest.o: ..\USER\stm32f10x_conf.h
+..\obj\servotest.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\servotest.o: ..\USER\stm32f10x.h
+..\obj\servotest.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\servotest.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\servotest.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\servotest.o: ..\HARDWARE\Servo.h
+..\obj\servotest.o: ..\HARDWARE\OLED.h
+..\obj\servotest.o: ..\SYSTEM\Delay.h
+..\obj\servotest.o: ..\HARDWARE\LED.h
+..\obj\servotest.o: ..\HARDWARE\Buzzer.h

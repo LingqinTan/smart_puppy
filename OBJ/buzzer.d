@@ -1,0 +1,13 @@
+..\obj\buzzer.o: ..\HARDWARE\Buzzer.c
+..\obj\buzzer.o: ..\HARDWARE\Buzzer.h
+..\obj\buzzer.o: ..\USER\stm32f10x.h
+..\obj\buzzer.o: ..\CORE\core_cm3.h
+..\obj\buzzer.o: D:\Software\SoftwareTool\MDK5.14\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\buzzer.o: ..\USER\system_stm32f10x.h
+..\obj\buzzer.o: ..\USER\stm32f10x_conf.h
+..\obj\buzzer.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
+..\obj\buzzer.o: ..\USER\stm32f10x.h
+..\obj\buzzer.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\buzzer.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
+..\obj\buzzer.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\buzzer.o: ..\SYSTEM\Delay.h
