@@ -1,2 +1,11 @@
 Build target 'Target 1'
-"..\OBJ\LED.axf" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+main.c(35): warning:  #223-D: function "Servo_SetAngle" declared implicitly
+      Servo_SetAngle(4, angle);
+main.c(141): warning:  #223-D: function "Servo_SetAngle" declared implicitly
+              Safe_Servo4_Move(100); Servo_SetAngle(1, 80); 
+main.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=15738 RO-data=1790 RW-data=192 ZI-data=1024  
+FromELF: creating hex file...
+"..\OBJ\LED.axf" - 0 Error(s), 2 Warning(s).

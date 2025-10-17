@@ -12,9 +12,7 @@
 ..\obj\main.o: ..\HARDWARE\LED.h
 ..\obj\main.o: ..\HARDWARE\Key.h
 ..\obj\main.o: ..\SYSTEM\Delay.h
-..\obj\main.o: ..\HARDWARE\Buzzer.h
 ..\obj\main.o: ..\HARDWARE\OLED.h
 ..\obj\main.o: ..\HARDWARE\DogActions.h
 ..\obj\main.o: ..\HARDWARE\ControlSystem.h
-..\obj\main.o: ..\HARDWARE\BluetoothControl.h
 ..\obj\main.o: ..\HARDWARE\Ultrasonic.h

@@ -57,4 +57,8 @@ ServoAngles Dog_GetServoConfig(uint8_t servo_id);
 void Dog_SetAllServos(float fl_angle, float fr_angle, float rl_angle, float rr_angle);
 void Dog_SmoothMove(uint8_t servo_id, float start_angle, float end_angle, uint16_t duration_ms);
 
+void Dog_Action_Hello(void);
+void Dog_Action_SitDown(void);
+void Dog_Action_ShakeBody(void);
+
 #endif

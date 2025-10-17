@@ -465,7 +465,7 @@ ARM Macro Assembler    Page 8
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=..\obj\startup_stm32f10x_md.d -o..\obj\startup_stm32f10x_md.o -Id:
-\HomeFolder\Desktop\STM32F1xx_CODE\smart-puppy\USER\RTE -ID:\Software\SoftwareT
+\HomeFolder\Desktop\STM32F1xx_CODE\smart_puppy\USER\RTE -ID:\Software\SoftwareT
 ool\MDK5.14\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include -ID:\Software\Soft
 wareTool\MDK5.14\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predefine=
 "__UVISION_VERSION SETA 514" --predefine="STM32F10X_MD SETA 1" --list=.\startup
