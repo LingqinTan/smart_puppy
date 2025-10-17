@@ -132,11 +132,11 @@ void Execute_Avoidance_Action(AvoidState state)
     
     switch(state) {
         case AVOID_CLEAR:
-            OLED_ShowString(1, 1, "STATE: WALKING   ");
+            // 表情：专注前进
+            OLED_ShowString(1, 1, " (> _ <) Run!  ");
             LED3_ON(); LED1_OFF(); LED2_OFF(); LED4_OFF();
             Dog_Stand(); 
-            // Delay_ms(200); // <-- 原来的阻塞代码
-            if (Delay_ms_Interruptible(200)) return; // <-- 修正
+            if (Delay_ms_Interruptible(200)) return; 
             
             Safe_Servo4_Move(100); Servo_SetAngle(1, 80); 
             Servo_SetAngle(2, 100); Servo_SetAngle(3, 80);
@@ -146,7 +146,8 @@ void Execute_Avoidance_Action(AvoidState state)
             break;
             
         case AVOID_WARNING:
-            OLED_ShowString(1, 1, "STATE: SLOW DOWN ");
+            // 表情：警觉！
+            OLED_ShowString(1, 1, " (o _ O) !!    ");
             LED2_ON(); LED1_OFF(); LED3_OFF(); LED4_OFF();
             Dog_Stand(); 
             // Delay_ms(800); // <-- 原来的阻塞代码
@@ -154,7 +155,8 @@ void Execute_Avoidance_Action(AvoidState state)
             break;
             
         case AVOID_DANGER:
-            OLED_ShowString(1, 1, "STATE: TURNING   ");
+            // 表情：晕！转向！
+            OLED_ShowString(1, 1, " (@ _ @) ??    ");
             LED1_ON(); LED2_OFF(); LED3_OFF(); LED4_OFF();
             
             if((action_counter % 2) == 0) {
@@ -165,7 +167,8 @@ void Execute_Avoidance_Action(AvoidState state)
                 if (Delay_ms_Interruptible(600)) return; // <-- 修正
                 Dog_Stand();
             } else {
-                OLED_ShowString(2, 1, "ACTION: TURN RIGHT");
+                // 表情：晕！转向！
+                OLED_ShowString(1, 1, " (@ _ @) ??    ");
                 Safe_Servo4_Move(110); Servo_SetAngle(1, 70);
                 Servo_SetAngle(2, 110); Servo_SetAngle(3, 70); 
                 // Delay_ms(600); // <-- 原来的阻塞代码
@@ -185,15 +188,23 @@ void Execute_Avoidance_Action(AvoidState state)
 // 步骤 2.5: 修正模式调度器
 // -----------------------------------------------------------------
 
-// 模式: 空闲待机 (不变)
+/**
+ * @brief 模式: 空闲待机 (添加了表情)
+ * @note  保持站立，OLED显示表情, 等待按键命令
+ */
 void Mode_Idle_Loop(void)
 {
-    OLED_ShowString(1, 1, "== SMART PUPPY ==");
-    OLED_ShowString(2, 1, "MODE: IDLE      ");
-    OLED_ShowString(3, 1, "K1: AVOIDANCE   ");
-    OLED_ShowString(4, 1, "K2: HELLO K3:SIT");
+    // --- 在这里添加你的表情 ---
+    OLED_ShowString(1, 1, "  (^ v ^) Zzz "); // 1行: 开心的表情 + Zzz (表示待机)
+    OLED_ShowString(2, 1, "   MODE: IDLE   ");
+    OLED_ShowString(3, 1, " K1: AVOIDANCE  ");
+    OLED_ShowString(4, 1, " K2: HELLO K3:SIT");
+    
+    // 在空闲模式下，我们只站立，不做任何动作，以节省电力
     Dog_Stand();
-    Delay_ms(100); // IDLE模式下的延时很短，不需要修改
+    
+    // 短暂延时，降低CPU占用率
+    Delay_ms(100); // 这个延时很短, 不会阻塞 K1/K2/K3 的响应
 }
 
 // 修正：自主避障
@@ -216,32 +227,37 @@ void Mode_Avoidance_Loop(void)
     if (Delay_ms_Interruptible(1200)) return; // <-- 修正
 }
 
-// 模式: 执行一次 "你好" (不变)
+/**
+ * @brief 模式: 执行一次 "你好" (带表情)
+ * @note  执行完毕后，自动返回 IDLE 模式
+ */
 void Mode_Action_Hello_Once(void)
 {
     OLED_Clear();
     OLED_ShowString(1, 1, "== ACTION ==");
-    OLED_ShowString(2, 1, "   Hello !   ");
+    OLED_ShowString(2, 1, "  (^ o ^)/ Hi! "); // <-- 修改点
     LED1_ON(); LED2_ON();
     
-    Dog_Action_Hello(); // (这个动作里面的延时很短，暂时不改)
+    Dog_Action_Hello(); 
     
     LED1_OFF(); LED2_OFF();
     OLED_Clear();
     current_mode = MODE_IDLE; 
 }
 
-// 模式: 执行一次 "坐下" (不变)
+/**
+ * @brief 模式: 执行一次 "坐下" (带表情)
+ * @note  执行完毕后，自动返回 IDLE 模式
+ */
 void Mode_Action_Sit_Once(void)
 {
     OLED_Clear();
     OLED_ShowString(1, 1, "== ACTION ==");
-    OLED_ShowString(2, 1, "   Sit Down   ");
+    OLED_ShowString(2, 1, "  (- . -) Sit  "); // <-- 修改点
     LED3_ON(); LED4_ON();
     
     Dog_Action_SitDown(); 
-    // Delay_ms(1000); // <-- 原来的阻塞代码
-    if (Delay_ms_Interruptible(1000)) return; // <-- 修正
+    if (Delay_ms_Interruptible(1000)) return; 
     
     LED3_OFF(); LED4_OFF();
     OLED_Clear();

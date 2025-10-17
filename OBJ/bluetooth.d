@@ -12,3 +12,4 @@
 ..\obj\bluetooth.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\bluetooth.o: ..\SYSTEM\Delay.h
 ..\obj\bluetooth.o: D:\Software\SoftwareTool\MDK5.14\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\bluetooth.o: ..\HARDWARE\DogActions.h
